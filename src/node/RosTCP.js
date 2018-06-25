@@ -12,10 +12,7 @@ var util = require('util');
  */
 function RosTCP(options) {
   options = options || {};
-  if (!options.encoding) {
-    console.error('ROSLib uses utf8 encoding by default.' +
-      'It would be more efficent to use ascii (if possible)');
-  }
+  // Fuck you to the ROS developers who put a console.error here
   this.encoding = options.encoding || 'utf8';
   Ros.call(this, options);
 
